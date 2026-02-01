@@ -541,6 +541,101 @@ Expertise = "Janitor"
 Department = "Sanitization"
 Mood = "Apathetic"
 
+[node name="diologue" type="Node" parent="NPC5" unique_id=444047966]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105001
+Diologue_text_initial = "..."
+Diologue_text_leading = "*She’s clearly in pain.*"
+Char_Diologue_first_option = "Oh, uh. I like your bonnet."
+Char_Diologue_second_option = "Do you want some help?"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 1
+Char_Diologue_second_option_outcome = 2
+Char_Diologue_third_option_outcome = 4
+
+[node name="diologue2" type="Node" parent="NPC5" unique_id=1716222924]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105002
+Diologue_path_requisite_id = 1
+Diologue_text_initial = "My .... bonnet?"
+Diologue_text_leading = "mhmh..."
+Char_Diologue_first_option = "Like I said, nice bonnet."
+Char_Diologue_second_option = "Would you like me to help"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 3
+Char_Diologue_second_option_outcome = 2
+Char_Diologue_third_option_outcome = 4
+
+[node name="diologue3" type="Node" parent="NPC5" unique_id=841342650]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105003
+Diologue_path_requisite_id = 2
+Diologue_text_initial = "Help, no that surgeon has given quite enough."
+Diologue_text_leading = "..."
+Char_Diologue_first_option = "ummm, ok."
+Char_Diologue_second_option = "Whats your name?"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 3
+Char_Diologue_second_option_outcome = 3
+Char_Diologue_third_option_outcome = 3
+
+[node name="diologue4" type="Node" parent="NPC5" unique_id=877866845]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105004
+Diologue_path_requisite_id = 3
+Diologue_text_initial = "Im, the Janitor by the way."
+Diologue_text_leading = "... bye..."
+Char_Diologue_first_option = "Is that so..."
+Char_Diologue_second_option = "I didn't catch your name"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
+[node name="diologue5" type="Node" parent="NPC5" unique_id=1224451327]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105005
+Diologue_path_requisite_id = 4
+Diologue_text_initial = "...heh"
+Diologue_text_leading = "I like you, stay away from the surgeon."
+Char_Diologue_first_option = "Ok, will do."
+Char_Diologue_second_option = "Thanks!"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Direct"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 4
+Char_Diologue_second_option_outcome = 4
+Char_Diologue_third_option_outcome = 5
+
+[node name="diologue6" type="Node" parent="NPC5" unique_id=400912205]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 105006
+Diologue_path_requisite_id = 5
+Diologue_text_initial = "He cuts up his victims and sells them off to fund the Hospital."
+Diologue_text_leading = "...heh"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "...!"
+Char_Diologue_third_option = "...?"
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Direct"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
 [node name="NPC6" type="Node" parent="." unique_id=1758290666]
 script = ExtResource("1_gi6ki")
 Prefered_diologe_type = "Direct"
@@ -603,8 +698,8 @@ Char_Diologue_first_option_type = "Direct"
 Char_Diologue_second_option_type = "Confrontational"
 Char_Diologue_third_option_type = "Inquisitive"
 Char_Diologue_first_option_outcome = 3
-Char_Diologue_second_option_outcome = 6
-Char_Diologue_third_option_outcome = 5
+Char_Diologue_second_option_outcome = 5
+Char_Diologue_third_option_outcome = 4
 Char_Diologue_secret_option = "I'm looking for the records of one Mr Sanchezz."
 Char_Diologue_secret_option_requisite = 102008
 Char_Diologue_secret_option_type = "Inquisitive"
@@ -612,8 +707,8 @@ Char_Diologue_secret_option_outcome = 10
 
 [node name="diologuesandi4" type="Node" parent="NPC6" unique_id=108077751]
 script = ExtResource("2_5o0wo")
-Diologue_path_id = 106003
-Diologue_path_requisite_id = 2
+Diologue_path_id = 106004
+Diologue_path_requisite_id = 3
 Diologue_text_initial = "I will leave her a report of our minutes."
 Diologue_text_leading = "Can you fill out you insurance information?"
 Char_Diologue_first_option = "No!"
@@ -622,13 +717,61 @@ Char_Diologue_third_option = "I filled out forms already."
 Char_Diologue_first_option_type = "Confrontational"
 Char_Diologue_second_option_type = "Direct"
 Char_Diologue_third_option_type = "Vague"
-Char_Diologue_first_option_outcome = 6
-Char_Diologue_second_option_outcome = 7
-Char_Diologue_third_option_outcome = 7
+Char_Diologue_first_option_outcome = 5
+Char_Diologue_second_option_outcome = 6
+Char_Diologue_third_option_outcome = 6
 Char_Diologue_secret_option = "I filled out Madi's forms already to get in."
 Char_Diologue_secret_option_requisite = 114002
 Char_Diologue_secret_option_type = "Inquisitive"
 Char_Diologue_secret_option_outcome = 5
+
+[node name="diologuesandi5" type="Node" parent="NPC6" unique_id=1171988990]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 106005
+Diologue_path_requisite_id = 4
+Diologue_text_initial = "Here are our Public Records."
+Diologue_text_leading = "Most of it is redacted, but have fun."
+Char_Diologue_first_option = "No!"
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "*sigh*"
+Char_Diologue_first_option_type = "Confrontational"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
+[node name="diologuesandi6" type="Node" parent="NPC6" unique_id=1622665853]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 106006
+Diologue_path_requisite_id = 5
+Diologue_text_initial = "I'm done talking to you!"
+Diologue_text_leading = "..."
+Char_Diologue_first_option = "huh?"
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "Screw You too!"
+Char_Diologue_first_option_type = "Inquisitive"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Confrontational"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
+[node name="diologuesandi7" type="Node" parent="NPC6" unique_id=1194261033]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 106007
+Diologue_path_requisite_id = 6
+Diologue_text_initial = "Perfect Here is the run down. We are making great strides in our organ exports."
+Diologue_text_leading = "Sadly our Year-to-Day-Totals are down 5%."
+Char_Diologue_first_option = "ummm."
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "We should examine our market more closely."
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Direct"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
 
 [node name="NPC7" type="Node" parent="." unique_id=1775651246]
 script = ExtResource("1_gi6ki")
@@ -823,6 +966,21 @@ Expertise = "Nurse"
 Department = "OR"
 Mood = "Apathetic"
 
+[node name="diologuevangoff" type="Node" parent="NPC8" unique_id=331980087]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 108001
+Diologue_text_initial = "We are not allowed to inform you of REDACTED or REDACTED."
+Diologue_text_leading = "Please leave the OR or risk contamination of REDACTED!"
+Char_Diologue_first_option = "Will do!"
+Char_Diologue_second_option = "Ok, I guess the OR staff are under an NDA, then?"
+Char_Diologue_third_option = "Redact to you too!"
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Confrontational"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
 [node name="NPC9" type="Node" parent="." unique_id=165865929]
 script = ExtResource("1_gi6ki")
 Prefered_diologe_type = "Inquisitive"
@@ -987,6 +1145,37 @@ Expertise = "Civilian"
 Department = "Civilian"
 Mood = "Sad"
 
+[node name="diologue" type="Node" parent="NPC10" unique_id=1481610341]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 110001
+Diologue_text_initial = "I think that damned Docter stole my soul."
+Diologue_text_leading = "He is deffinitely a vampire!"
+Char_Diologue_first_option = "Yes, he must be."
+Char_Diologue_second_option = "Are you mad!"
+Char_Diologue_third_option = "Any more information?"
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 1
+Char_Diologue_second_option_outcome = 1
+Char_Diologue_third_option_outcome = 1
+
+[node name="diologue2" type="Node" parent="NPC10" unique_id=996622631]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 110002
+Diologue_path_requisite_id = 1
+Diologue_text_initial = "*Gasp, Weeze, Exhale*"
+Diologue_text_leading = "Aaaaaaagggggghhhhhhhhhh!"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "\"...\""
+Char_Diologue_third_option = "...?"
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
 [node name="NPC11" type="Node" parent="." unique_id=613156661]
 script = ExtResource("1_gi6ki")
 Prefered_diologe_type = "Inquisitive"
@@ -997,6 +1186,101 @@ DispositionRate = 8
 Expertise = "Doctor"
 Department = "Lab"
 Mood = "Cheerful"
+
+[node name="diologuephelicia" type="Node" parent="NPC11" unique_id=888612650]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 111001
+Diologue_text_initial = "I'm here to help! Your the first person to come here in weeks."
+Diologue_text_leading = "Ask away, and Ill try and help the best I can."
+Char_Diologue_first_option = "Is Dr. Craig harvesting organs?"
+Char_Diologue_second_option = "Is the HR department outsoarced?"
+Char_Diologue_third_option = "Where did all the uninsured patients go?"
+Char_Diologue_first_option_type = "Inquisitive"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 1
+Char_Diologue_second_option_outcome = 2
+Char_Diologue_third_option_outcome = 3
+Char_Diologue_secret_option = "Where is Mr. Sanchezz, with 2 zz's?"
+Char_Diologue_secret_option_requisite = 102008
+Char_Diologue_secret_option_type = "Inquisitive"
+Char_Diologue_secret_option_outcome = 4
+
+[node name="diologuephelicia2" type="Node" parent="NPC11" unique_id=1792368158]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 111002
+Diologue_path_requisite_id = 1
+Diologue_text_initial = "Yes, about 5 times a day."
+Diologue_text_leading = "Anything else?"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "Is the HR department outsoarced?"
+Char_Diologue_third_option = "Where did all the uninsured patients go?"
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Inquisitive"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 2
+Char_Diologue_third_option_outcome = 3
+Char_Diologue_secret_option = "Where is Mr. Sanchezz, with 2 zz's?"
+Char_Diologue_secret_option_requisite = 102008
+Char_Diologue_secret_option_type = "Inquisitive"
+Char_Diologue_secret_option_outcome = 4
+
+[node name="diologuephelicia3" type="Node" parent="NPC11" unique_id=1447047939]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 111003
+Diologue_path_requisite_id = 2
+Diologue_text_initial = "Of course that is how businesses run smoothly!"
+Diologue_text_leading = "Anything else?"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "Where did all the uninsured patients go?"
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 3
+Char_Diologue_secret_option = "Where is Mr. Sanchezz, with 2 zz's?"
+Char_Diologue_secret_option_requisite = 102008
+Char_Diologue_secret_option_type = "Inquisitive"
+Char_Diologue_secret_option_outcome = 4
+
+[node name="diologuephelicia4" type="Node" parent="NPC11" unique_id=837969164]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 111004
+Diologue_path_requisite_id = 3
+Diologue_text_initial = "onto the opperating table, their organs support their dividends."
+Diologue_text_leading = "Anything else?"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "....?"
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+Char_Diologue_secret_option = "Where is Mr. Sanchezz, with 2 zz's?"
+Char_Diologue_secret_option_requisite = 102008
+Char_Diologue_secret_option_type = "Inquisitive"
+Char_Diologue_secret_option_outcome = 4
+
+[node name="diologuephelicia5" type="Node" parent="NPC11" unique_id=652900983]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 111005
+Diologue_path_requisite_id = 4
+Diologue_text_initial = "Dead, already off on the last shipment."
+Diologue_text_leading = "Anything else?"
+Char_Diologue_first_option = "Best of luck."
+Char_Diologue_second_option = "Ok, then, good day."
+Char_Diologue_third_option = "....!"
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Direct"
+Char_Diologue_third_option_type = "Direct"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
 
 [node name="NPC12" type="Node" parent="." unique_id=1778735364]
 script = ExtResource("1_gi6ki")
@@ -1009,6 +1293,37 @@ Expertise = "Doctor"
 Department = "OR"
 Mood = "Apathetic"
 
+[node name="diologuecraig" type="Node" parent="NPC12" unique_id=2120578904]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 112001
+Diologue_text_initial = "I have just finnished an opperation."
+Diologue_text_leading = "Please leave before you contaminate further!"
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "What are you doing in here?"
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Inquisitive"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 1
+
+[node name="diologuecraig2" type="Node" parent="NPC12" unique_id=2016112296]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 112002
+Diologue_path_requisite_id = 1
+Diologue_text_initial = "I'm a surgeon...  my job!"
+Diologue_text_leading = "..."
+Char_Diologue_first_option = "..."
+Char_Diologue_second_option = "..."
+Char_Diologue_third_option = "Right..."
+Char_Diologue_first_option_type = "Vague"
+Char_Diologue_second_option_type = "Vague"
+Char_Diologue_third_option_type = "Direct"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
+
 [node name="NPC13" type="Node" parent="." unique_id=650988022]
 script = ExtResource("1_gi6ki")
 Prefered_diologe_type = "Vague"
@@ -1019,6 +1334,37 @@ DispositionRate = 7
 Expertise = "Civilian"
 Department = "HR"
 Mood = "Chill"
+
+[node name="diologuehilda" type="Node" parent="NPC13" unique_id=1895080268]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 113001
+Diologue_text_initial = "Stay away from me, I have Business to do."
+Diologue_text_leading = "..."
+Char_Diologue_first_option = "Bye."
+Char_Diologue_second_option = "Screw you!"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Confrontational"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 1
+Char_Diologue_third_option_outcome = 100
+
+[node name="diologuehilda2" type="Node" parent="NPC13" unique_id=2060177047]
+script = ExtResource("2_5o0wo")
+Diologue_path_id = 113002
+Diologue_path_requisite_id = 1
+Diologue_text_initial = "Get that dirty mouth out of here!"
+Diologue_text_leading = "..."
+Char_Diologue_first_option = "Bye."
+Char_Diologue_second_option = "I said, Screw You!"
+Char_Diologue_third_option = "..."
+Char_Diologue_first_option_type = "Direct"
+Char_Diologue_second_option_type = "Confrontational"
+Char_Diologue_third_option_type = "Vague"
+Char_Diologue_first_option_outcome = 100
+Char_Diologue_second_option_outcome = 100
+Char_Diologue_third_option_outcome = 100
 
 [node name="NPC14" type="Node" parent="." unique_id=1049428585]
 script = ExtResource("1_gi6ki")
