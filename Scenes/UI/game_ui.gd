@@ -7,6 +7,7 @@ extends Control
 @onready var secondText = $dialog/RichTextLabel2
 @onready var options = $options
 @onready var dialogOptions = $avialableCharacters
+@onready var junctions = $junctions
 
 @onready var dialog1 = $avialableCharacters/Button
 @onready var dialog2 = $avialableCharacters/Button2
@@ -28,14 +29,33 @@ var janice = Reception.get_node("NPC1")
 var robert = Reception.get_node("NPC2")
 var jim = Reception.get_node("NPC3")
 var mia = Reception.get_node("NPC4")
+var profiles = Reception.get_children() #
+var profileNames = RoomManager.NPC_NAMES
 
-var npcProfiles = [ janice, jim, ]
+#var npcProfiles = [ janice, jim ]
+var npcProfiles = []
 var activeNPC = ""
 var activeNPCIdx = 0
 var npcOutcomes = [0,0,0,0]
 var outComeTypes
 var pathID = 0
 var dispRate = 0
+
+
+
+#func setActiveNPCs():
+	#var activeNPCIdx = []
+	#for ch in profileNames:
+		#for k in npcs.size():
+			#if(ch == npcs[k]):
+				#npcProfiles.append(profiles[k])
+				##activeNPCIdx.append(profiles[k])
+				#activeNPCIdx = (profiles[k])
+				#print(ch, profiles[k])
+				
+
+				
+
 
 # Hides the buttons we don't need in dialogOptions
 func hideCommunicate(node: Button) -> void:
@@ -46,8 +66,7 @@ func hideControl() -> void:
 	dialog.visible = false
 	options.visible = false
 	dialogOptions.visible = false
-
-
+	junctions.visible = false
 
 func disableNode(node: Button):
 	node.disabled = true
@@ -60,6 +79,8 @@ func _ready() -> void:
 	charDialogeSecond.pressed.connect(_on_D_Option2_Pressed)
 	charDialogeThird.pressed.connect(_on_D_Option3_Pressed)
 	charDialogeSecret.pressed.connect(_on_D_OptionSecret_Pressed)
+	#setActiveNPCs()
+	
 	
 	# Start with all UI not visible
 	hideControl()
@@ -89,13 +110,38 @@ func _on_communicate_pressed() -> void:
 	hideControl()
 	
 	dialogOptions.visible = true
+	for i in range(profileNames.size()):
+		for j in range(npcs.size()):
+			if(profileNames[i] == npcs[j]):
+				npcProfiles.append(profiles[i])
+	print(npcProfiles)
 	avialableCharactersinRoom()
 	pass # Replace with function body.
 
+
+
+func updateJunctions() -> void:
+	var activeJunction = RoomManager.activeJunction
+	var visibleDirections = [false,false,false,false,false,false,false,false]
+	var directionCount = junctions.get_child_count()
+	var activeDirectionCount = activeJunction["directions"].size()
+	for i in range(activeDirectionCount):
+		for j in range(directionCount):
+			if(activeJunction["directions"][i] == j): # for every active direction is it the same as our buttons direction? if yes then:
+				visibleDirections[j] = visibleDirections[j] || true # we are at an active direction, lets keep it to render later
+				junctions.get_child(j).get_node("Label").text = activeJunction["adjacentJunctions"][i] # lets set the direction with the coresponding location
+	#im doing a seperate for loop to disable/enable the innactive/active direction buttons
+	for k in range(directionCount):
+		if(visibleDirections[k]):
+			junctions.get_child(k).visible = true
+		else:
+			junctions.get_child(k).visible = false
+	pass
+
 func _on_movement_pressed() -> void:
 	hideControl()
-	#junctions.visible = true
-	#updateJunctions()
+	junctions.visible = true
+	updateJunctions()
 	pass # Replace with function body.
 
 
@@ -218,7 +264,7 @@ func enterDialogueWith(npc):
 	activeNPC = npc
 	for i in range(npcs.size()):
 		if(npc == npcProfiles[i].Name):
-			activeNPCIdx = i	
+			activeNPCIdx = i
 			CharacterName.text = npc
 			if(!playerState["npcs"][npc]["hasEncountered"]):
 				var D1 = npcProfiles[i].get_child(0)
@@ -274,3 +320,44 @@ func enterDialogueWith(npc):
 	
 	pass
 				
+
+
+func _on_southwest_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/southwest/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_west_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/west/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_northwest_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/northwest/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_north_texture_button_pressed() -> void:
+	RoomManager.set_active_junction($junctions/north/Label.text)
+	hideControl()
+	options.visible = true
+
+func _on_northeast_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/northeast/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_east_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/east/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_southeast_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/southeast/Label.text
+	hideControl()
+	options.visible = true
+
+func _on_south_texture_button_pressed() -> void:
+	RoomManager.Junction["name"] = $junctions/south/Label.text
+	hideControl()
+	options.visible = true
