@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://b5amudxts5tmn"]
+
+[node name="Reception" type="Control" unique_id=1717544686]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPC2" parent="." unique_id=1271583253]
+Prefered_diologe_type = "Confrontational"
+Disposition = 40
+Name = "robert"
+Name_2 = "sanchezz"
+DispositionRate = 10
+Expertise = "Civilian"
+Department = "Civilian"
+Mood = "Angry"
+
+[node name="Diologuerobert1" parent="NPC2" unique_id=365090572]
+
+[node name="Diologuerobert2" parent="NPC2" unique_id=694112934]
+
+[node name="Diologuerobert3" parent="NPC2" unique_id=1403863827]
+
+[node name="Diologuerobert4" parent="NPC2" unique_id=1761426166]
+
+[node name="Diologuerobert5" parent="NPC2" unique_id=1211896759]
+
+[node name="Diologuerobert6" parent="NPC2" unique_id=1858552328]
+
+[node name="Diologuerobert7" parent="NPC2" unique_id=1088113835]
+
+[node name="Diologuerobert8" parent="NPC2" unique_id=941158530]
+
+[node name="Diologuerobert9" parent="NPC2" unique_id=133886121]
+
+[node name="NPC3" parent="." unique_id=965265231]
+Prefered_diologe_type = "Inquisitive"
+Disposition = 42
+Name = "jim"
+Name_2 = "tim"
+DispositionRate = 2
+Expertise = "Accountant"
+Department = "Managment"
+Mood = "Apathetic"
+
+[node name="Diologuejim1" parent="NPC3" unique_id=1720060857]
+
+[node name="Diologuejim2" parent="NPC3" unique_id=1995978611]
+
+[node name="Diologuejim3" parent="NPC3" unique_id=1395203184]
+
+[node name="Diologuejim4" parent="NPC3" unique_id=2130864476]
+
+[node name="Diologuejim5" parent="NPC3" unique_id=1611745681]
+
+[node name="Diologuejim6" parent="NPC3" unique_id=1796178251]
+
+[node name="NPC4" parent="." unique_id=324083473]
+Prefered_diologe_type = "Vague"
+Disposition = 45
+Name = "mia"
+Name_2 = "that depressed  nurse"
+DispositionRate = 15
+Expertise = "Nurse"
+Department = "Nurses"
+Mood = "Sad"
+
+[node name="Diologuemia3" parent="NPC4" unique_id=1617919744]
+
+[node name="Diologuemia2" parent="NPC4" unique_id=1591661603]
+
+[node name="Diologuemia1" parent="NPC4" unique_id=1391093886]
+
+[node name="Diologuemia4" parent="NPC4" unique_id=808832832]
+
+[node name="Diologuemia5" parent="NPC4" unique_id=1967108610]
+
+[node name="Diologuemia6" parent="NPC4" unique_id=781755093]
+
+[node name="Diologuemia7" parent="NPC4" unique_id=1083969085]
+
+[node name="NPC1" parent="." unique_id=1931630368]
+Prefered_diologe_type = "Direct"
+Disposition = 50
+Name = "Janice"
+Name_2 = "Jan"
+DispositionRate = 5
+Expertise = "Nurse"
+Department = "Nurses"
+Mood = "Cheerful"
+
+[node name="Diologuejan1" parent="NPC1" unique_id=1191691465]
+
+[node name="Diologuejan2" parent="NPC1" unique_id=805597683]
+
+[node name="Diologuejan3" parent="NPC1" unique_id=426387669]
+
+[node name="Diologuejan4" parent="NPC1" unique_id=2030032089]
+
+[node name="Diologuejan5" parent="NPC1" unique_id=1784417481]
